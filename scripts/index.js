@@ -13,7 +13,7 @@ const render = (cars = [], DOMNode = messageNode) => {
 
 const getData = async () => {
     try {
-        const response = await fetch('/.netlify/functions/hello-world')
+        const response = await fetch('/.netlify/functions/read-all-cars')
         if(!response.ok) throw response
         const data = await response.json()
         render(data)
